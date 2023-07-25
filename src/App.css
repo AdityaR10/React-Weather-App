@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  
 }
 
 .App-logo {
@@ -11,7 +12,20 @@
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
+} 
+
+body { 
+  
+  color: white;
+ background-image: url("https://cdn.pixabay.com/photo/2019/08/09/10/04/landscape-4394746_1280.jpg");
+ /* background-repeat:round; */
+ 
+ /* background: rgb(0,32,36);
+background: linear-gradient(90deg, rgba(0,32,36,1) 4%, rgba(5,85,84,1) 24%, rgba(7,101,101,0.9248949579831933) 38%, rgba(9,113,121,1) 58%, rgba(0,249,255,0.2498249299719888) 100%);
+   */
 }
+
+ 
 
 .App-header {
   background-color: #282c34;
@@ -22,12 +36,74 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+} 
+
+.input-city{
+  width: 30%;
+}
+.flex-grid{
+  display: flex;
+  justify-content: center;
+}
+.row{
+  margin-top: 5rem;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-template-rows: auto;
+  column-gap: 15px;
+  margin-left: 3rem;
+  margin-right: 3rem;
 }
 
-.App-link {
-  color: #61dafb;
+.column{
+  background-image: url("https://images.unsplash.com/photo-1610730260505-0b9ed7f06293?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80");
+  height: 300px;
+  max-width: 500px;
+  min-height: 40vh;
+  border-radius: 20px;
+  padding: 10px;
+  padding-left: 20px;
+  position: relative;
+  
 }
 
+.data-container{
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+   align-items: center;
+   height: 5rem;
+ position: absolute;
+ top: 5rem;
+ left: 10rem;
+
+}
+.w-temp{
+  font-size: 4rem;
+}
+
+.weather-header{
+   
+  font-family: "DM Sans",sans-serif;
+  text-align: center;
+}
+
+@media (max-width:1200px)
+{
+  .w-temp{
+    font-size: 4rem;
+  }
+  .row{
+    width: 80%;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3,1fr);
+    row-gap: 15px;
+    place-items: center;
+   
+  }
+}
+ 
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

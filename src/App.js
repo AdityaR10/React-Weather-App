@@ -1,24 +1,26 @@
 import logo from './logo.svg';
 import './App.css';
-
+import Header from './components/Wheader';
+import Footer from './components/Wfooter';
+import WeatherInfo from './components/Winfo'; 
+import FetchWeatherData from './components/Wdata';
+import { useEffect, useState,axios } from 'react';  
+import ColorSchemesExample from './components/Nav';
+import AreaData from './components/AreaWiseData';
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+
+    
+    <div className="weather-app">
+      
+    <Header/> 
+    <AreaData/>
+    <WeatherInfo/> 
+     
+    {/* <Footer/> */}
+
+   </div>
   );
 }
 
