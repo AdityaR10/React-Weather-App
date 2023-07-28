@@ -3,17 +3,16 @@
     import Clock from "./clock";
      
 
-    function FetchWeatherData(){
+    function FetchWeatherData(props){
 
       const [temper,setTemp]=useState(null); 
 
       const [heat,setHeat]=useState(null); 
       const [skyStat,setStat]=useState(null);  
       console.log(temper);
-
-     const appidVAr="55a767a3561b51291f1bd617d15dc0fa";
+    const appidVAr=props.apiKey;
           const unit="metric";
-          const area="Indore"
+          const area="Indore";
           const url="https://api.openweathermap.org/data/2.5/weather?q="+area+"&appid="+appidVAr+"&units="+unit; 
           const currWeather=fetch(url); 
           useEffect(()=>{
@@ -42,5 +41,4 @@
             </div>
         );
         }
-
         export default FetchWeatherData;
